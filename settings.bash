@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set a project name, no empty spaces or special characters allowed
-export PROJECT_NAME=docker_image_development
+export PROJECT_NAME=ugv_nav4d_ros2
 
 # path to your docker registry, leave blank if you don't have one
 # e.g. my.registry.com, ghcr.io/dfki-ric, docker.pkg.github.com, harbor.mydomain.com
@@ -28,8 +28,8 @@ export DOCKER_REGISTRY_AUTOPULL=false
 
 ### The default release mode to use if no mode paramater is given to ./exec.bash or ./stop.bash
 ### The checked in version should reflect the image status and be the highest availale image (base - devel - release)
-export DEFAULT_EXECMODE="base" # Use this only for setting up the initial devel image (modify setup_workspace.bash)
-# export DEFAULT_EXECMODE="devel" # This is used while deveoping code and preparing a relase
+# export DEFAULT_EXECMODE="base" # Use this only for setting up the initial devel image (modify setup_workspace.bash)
+export DEFAULT_EXECMODE="devel" # This is used while deveoping code and preparing a relase
 # export DEFAULT_EXECMODE="frozen" # use the release as default
 # export DEFAULT_EXECMODE="release" # use the release as default
 # export DEFAULT_EXECMODE="CD" # use the continuous deployment image as default
@@ -39,10 +39,10 @@ export DEFAULT_EXECMODE="base" # Use this only for setting up the initial devel 
 # export WORKSPACE_BASE_IMAGE=developmentimage/rock_master_22.04:base # image with rock core dependencies installed
 # export WORKSPACE_BASE_IMAGE=developmentimage/ros_noetic_20.04:base # image with basic ros noetic installed
 # export WORKSPACE_BASE_IMAGE=developmentimage/ros2_foxy_20.04:base # image with ros2 foxy desktop installed
-# export WORKSPACE_BASE_IMAGE=developmentimage/ros2_humble_22.04:base # image with ros2 humble desktop installed
+export WORKSPACE_BASE_IMAGE=developmentimage/ros2_humble_22.04:base # image with ros2 humble desktop installed
 # export WORKSPACE_BASE_IMAGE=developmentimage/ros2_jazzy_24.04:base # image with ros2 humble desktop installed
 # export WORKSPACE_BASE_IMAGE=developmentimage/plain_20.04:base # plain image with build_essentials installed
-export WORKSPACE_BASE_IMAGE=developmentimage/plain_22.04:base # plain image with build_essentials installed
+#export WORKSPACE_BASE_IMAGE=developmentimage/plain_22.04:base # plain image with build_essentials installed
 # export WORKSPACE_BASE_IMAGE=developmentimage/plain_24.04:base # plain image with build_essentials installed
 
 # The Name of the Workspace image to use
@@ -62,7 +62,7 @@ export WORKSPACE_CD_IMAGE=${CD_REGISTRY_GROUP}/${PROJECT_NAME}:CD
 # --dns-search=mydomain
 # --net=host
 # --privileged
-export ADDITIONAL_DOCKER_RUN_ARGS=""
+export ADDITIONAL_DOCKER_RUN_ARGS="--net=host --privileged --ipc=host --pid=host"
 
 
 # List of system services to be started in the container
@@ -72,7 +72,7 @@ export SERVICES=""
 
 # Make the exec script to talk more for debugging/docker setup purposes.
 # This may also be stated in the command line: $> VERBOSE=true ./exec.bash 
-# export VERBOSE=true
+export VERBOSE=true
 
 # Make the output as quiet as possible (does not apply to programs started in the container)
 # export SILENT=false

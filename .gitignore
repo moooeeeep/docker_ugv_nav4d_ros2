@@ -1,5 +1,8 @@
 home
-workspace
+workspace/build
+workspace/install
+workspace/log
+workspace/src
 container_root
 .container_config.txt
 *.tar.gz

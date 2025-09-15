@@ -8,10 +8,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 # generic packages to install non-workspace dependencies ( those are added later )
 RUN apt-get update && apt-get install -y \
     bash-completion \
+    wget ruby-dev apt-transport-https gnupg \
+    doxygen xdot qttools5-dev qttools5-dev-tools libopenscenegraph-dev libeigen3-dev libcgal-dev libpcl-dev libboost-filesystem-dev libboost-serialization-dev libboost-system-dev \
     && apt-get clean
 
 # add distributed compiler config
-ADD icecc.conf /etc/icecc/icecc.conf
+#ADD icecc.conf /etc/icecc/icecc.conf
 
 # make sure SHELL variable is set. Crucial for base/scripts! => moved to setup_workspace.bash
 ## REMOVE THIS ONCE rock-core PR 173 is merged
