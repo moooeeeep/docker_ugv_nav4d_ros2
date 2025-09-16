@@ -30,7 +30,7 @@ if [ ! -f ${AUTOPROJ_WS_ROOT}/env.sh ]; then
     # setup ws using autoproj
     mkdir -p ${AUTOPROJ_WS_ROOT} && cd ${AUTOPROJ_WS_ROOT}
     wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autoproj_bootstrap
-    git clone $BUILDCONF /tmp/buildconf
+    git clone $BUILDCONF --branch $BRANCH /tmp/buildconf
     AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR=1 ruby autoproj_bootstrap \
         git $BUILDCONF branch=main \
         --seed-config=/tmp/buildconf/seed-config.yaml \
