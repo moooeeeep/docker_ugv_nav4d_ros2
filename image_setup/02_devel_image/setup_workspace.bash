@@ -6,7 +6,7 @@
 set -e
 
 BUILDCONF=https://github.com/moooeeeep/ugv_nav4d_buildconf.git
-BRANCH=main
+BRANCH=jazzy
 
 if [ ! $1 = "" ]; then
    echo "overriding git credential helper to $1"

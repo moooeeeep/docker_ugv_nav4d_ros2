@@ -1,3 +1,3 @@
 #! /bin/bash
 
-(. /opt/ros/humble/setup.bash; colcon build)
+(. /opt/ros/jazzy/setup.bash; colcon build)

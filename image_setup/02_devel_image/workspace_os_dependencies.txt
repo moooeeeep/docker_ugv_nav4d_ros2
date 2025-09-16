@@ -15,20 +15,20 @@ cmake
  pkg-config 
  python3-colcon-common-extensions 
  qtbase5-dev 
- ros-humble-ament-cmake 
- ros-humble-geometry-msgs 
- ros-humble-nav-msgs 
- ros-humble-pcl-conversions 
- ros-humble-pluginlib 
- ros-humble-rclcpp 
- ros-humble-rclcpp-components 
- ros-humble-rosidl-default-generators 
- ros-humble-rosidl-default-runtime 
- ros-humble-rviz-common 
- ros-humble-rviz-rendering 
- ros-humble-sensor-msgs 
- ros-humble-std-msgs 
- ros-humble-std-srvs 
- ros-humble-tf2-geometry-msgs 
- ros-humble-tf2-ros
+ ros-jazzy-ament-cmake 
+ ros-jazzy-geometry-msgs 
+ ros-jazzy-nav-msgs 
+ ros-jazzy-pcl-conversions 
+ ros-jazzy-pluginlib 
+ ros-jazzy-rclcpp 
+ ros-jazzy-rclcpp-components 
+ ros-jazzy-rosidl-default-generators 
+ ros-jazzy-rosidl-default-runtime 
+ ros-jazzy-rviz-common 
+ ros-jazzy-rviz-rendering 
+ ros-jazzy-sensor-msgs 
+ ros-jazzy-std-msgs 
+ ros-jazzy-std-srvs 
+ ros-jazzy-tf2-geometry-msgs 
+ ros-jazzy-tf2-ros
 
