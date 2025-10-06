@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     bash-completion \
     wget ruby-dev apt-transport-https gnupg \
     doxygen xdot qttools5-dev qttools5-dev-tools libopenscenegraph-dev libeigen3-dev libcgal-dev libpcl-dev libboost-filesystem-dev libboost-serialization-dev libboost-system-dev \
+    libqt5core5a libqt5widgets5 \
     && apt-get clean
 
 # add distributed compiler config
