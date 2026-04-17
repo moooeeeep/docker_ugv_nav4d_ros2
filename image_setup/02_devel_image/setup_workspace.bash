@@ -33,6 +33,7 @@ if [ ! -f ${AUTOPROJ_WS_ROOT}/env.sh ]; then
     git clone $BUILDCONF --branch $BRANCH /tmp/buildconf
     AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR=1 ruby autoproj_bootstrap \
         git $BUILDCONF branch=main \
+        --bundler-version=2.7.2 \
         --seed-config=/tmp/buildconf/seed-config.yaml \
         --no-color --no-progress --no-interactive
     rm -rf /tmp/buildconf
